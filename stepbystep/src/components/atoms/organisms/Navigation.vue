@@ -85,11 +85,22 @@ const bottomMenu = computed(() => {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
 
     width: 100%;
+    height: calc(70vh - 20px);
 
-    &__title {
+    gap: 14px;
+
+    &__sub-menu{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        width: 100%;
+
+        &__title {
         margin-bottom: 12px;
 
         font-family: 'SUITE-Regular';
@@ -98,6 +109,8 @@ const bottomMenu = computed(() => {
     &__button-box {
         width: calc(100% - 24px);
     }
+    }
+    
 }
 </style>
 

@@ -21,10 +21,10 @@ const { theme } = toRefs(props)
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    padding: 40px;
 
     background-color: $color-white-000;
-    border-radius: 24px;
+    border-radius: 20px;
 
     &[layout-theme="blue"]{
         background-color: $color-blue-000;
