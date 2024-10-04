@@ -4,4 +4,8 @@
 
 <script setup lang="ts"></script>
 
-<style lang="scss" scoped></style>
+<style>
+body {
+  margin: 0px;
+}
+</style>
