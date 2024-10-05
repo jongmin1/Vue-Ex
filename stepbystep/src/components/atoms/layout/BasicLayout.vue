@@ -19,7 +19,7 @@ const { theme } = toRefs(props)
 .basic-layout {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
     padding: 40px;
 

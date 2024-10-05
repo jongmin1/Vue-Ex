@@ -27,12 +27,24 @@
                 <span class="label">Skill Match</span>
                 <span class="label">Skill</span>
             </div>
-            <div class="notice__body__list-box"></div>
+            <div class="notice__body__list-box">
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+                <NoticeList />
+            </div>
         </div>      
     </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import NoticeList from '@components/mocules/List.vue'
+</script>
 
 <style lang="scss" scoped>
 .notice{
