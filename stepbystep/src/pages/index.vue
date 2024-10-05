@@ -41,7 +41,7 @@ import Notice from '@/components/atoms/organisms/Notice.vue';
 
         &__navigation {
             width: 20%;
-            height: 75vh;
+            height: 100%;
         }
         &__notice {
             width: 80%;

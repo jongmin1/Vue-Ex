@@ -1,16 +1,18 @@
 <template>
     <div class="list">
         <div class="list__avatar">
-            <img src="../../assets/images/man.png" alt="" class="list__avatar__image">
+            <img src="@assets/images/man.png" alt="" class="list__avatar__image">
             <div class="list__avatar__text-box">
                 <span class="name">{{ data.userName }}</span>
                 <span class="duty">{{ data.userRole }}</span>
             </div>
         </div>
-        <div class="list__item"></div>
+        <div class="list__item">
             <BarChart :data="data.userResumeScore"/>
-        <div class="list__item"></div>
+        </div>
+        <div class="list__item">
             <BarChart :data="data.userSkillMatch"/>
+        </div>
         <div class="list__item">
             <div v-if="data.userSkill== 'Senior'" class="list__item__chip">{{ data.userSkill }}</div>
             <div v-if="data.userSkill== 'Junior'"class="list__item__chip junior">{{ data.userSkill }}</div>

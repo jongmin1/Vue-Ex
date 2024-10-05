@@ -19,9 +19,9 @@ const { theme } = toRefs(props)
 .basic-layout {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
 
-    padding: 40px;
+    padding: 20px;
 
     background-color: $color-white-000;
     border-radius: 20px;

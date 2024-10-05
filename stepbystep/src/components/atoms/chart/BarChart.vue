@@ -32,6 +32,7 @@ const {data} =toRefs(props)
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        justify-content: center;
 
         width: 100%;
 
@@ -52,11 +53,11 @@ const {data} =toRefs(props)
             .gauge {
                 position: absolute;
 
-                width: 70%;
+                // width: 70%;
                 height: 12px;
 
                 background-color: $color-green-000;
-                border-radius: 1-px;
+                border-radius: 10px;
             }
         }
 
