@@ -47,7 +47,7 @@ const { data } = toRefs(props)
 
         color: $color-white-000;
     }
-    &:hover {
+    &:hover { 
         width: 100%;
 
         background-color: rgba($color-white-000, 0.1);

@@ -269,7 +269,7 @@ onMounted(() => {
     }
     &__body {
         width: 100%;
-        height: calc(100% - 92px);
+        height: calc(100% - 80px);
 
         &__column {
             display: flex;

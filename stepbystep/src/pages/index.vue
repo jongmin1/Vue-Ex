@@ -33,11 +33,11 @@ import Notice from '@/components/atoms/organisms/Notice.vue';
 
     &__container {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
         width: 70vw;
-        height: 70vh;
+        height: 73.5vh;
 
         &__navigation {
             width: 20%;
