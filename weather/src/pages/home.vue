@@ -1,10 +1,14 @@
 <template>
     <div class="wrap">
         <div class="container"></div>
+            <MainView />
+            <SubView />
     </div>
 </template>
 
 <script setup lang="ts">
+import MainView from '@/components/MainView.vue';
+import SubView from '@/components/SubView.vue';
 </script>
 
 <style lang="scss" scoped>
@@ -25,6 +29,7 @@
         width: 55%;
         height: 90%;
         max-width: 1920px;
+        max-height: 1354px;
     }
 }
 </style>
