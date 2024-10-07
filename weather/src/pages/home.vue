@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
         <div class="container">
-            <MainView />
+            <MainView class="main-view"/>
             <SubView />
         </div>
     </div>
@@ -16,6 +16,7 @@ import SubView from '@/components/SubView.vue';
 .wrap {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 
     width: 100%;
     height: 100%;
@@ -23,13 +24,15 @@ import SubView from '@/components/SubView.vue';
     .container {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
+        justify-content: space-evenly;
 
-        width: calc(100% - 100px);
+        width: 100%;
         height: 100%;
         max-width: 1920px;
         max-height: 1354px;
     }
+    .main-view {
+            margin-right: 200px; /* MainView와 SubView 사이에 간격 추가 */
+        }
 }
 </style>
