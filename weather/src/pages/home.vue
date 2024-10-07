@@ -1,8 +1,9 @@
 <template>
     <div class="wrap">
-        <div class="container"></div>
+        <div class="container">
             <MainView />
             <SubView />
+        </div>
     </div>
 </template>
 
@@ -12,22 +13,21 @@ import SubView from '@/components/SubView.vue';
 </script>
 
 <style lang="scss" scoped>
-.warp {
+.wrap {
     display: flex;
     align-items: center;
-    justify-content: center;
 
     width: 100%;
-    height: 100vh;
-    font-size: 16px;
+    height: 100%;
 
     .container {
-        display: center;
+        display: flex;
         align-items: center;
         justify-content: space-between;
+        flex-direction: row;
 
-        width: 55%;
-        height: 90%;
+        width: calc(100% - 100px);
+        height: 100%;
         max-width: 1920px;
         max-height: 1354px;
     }

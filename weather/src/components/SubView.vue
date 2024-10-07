@@ -1,9 +1,9 @@
 <template>
     <div class="rightContainer">
-        <div id="cityNameBox">
-            <div class="cityName">
-                <p>San Fransisco</p>
-                <p>Oct 6, 2024</p>
+        <div class="cityNameBox">
+            <div class="cityNameBox__cityInfo">
+                <span class="cityNameBox__cityInfo__cityName">Busan</span>
+                <span class="cityNameBox__cityInfo__date">Oct 6, 2024</span>
             </div>
         </div>
         <div id="contentsBox">
@@ -14,36 +14,20 @@
                 </div>
             </div>
             <div class="weatherBox">
-                <div class="weatherDegree">
-                    <p>10&deg;</p>
+                <div class="airCondition">
+                    <p>매우 추움</p>
                 </div>
-                <div class="weatherIcon">
-                    <img src="../assets/images/01d.png" alt="MainLogo" />
-                </div>
-                <div class="weatherData">
-                    <div>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="todayWeather">
-            <div class="textBox">
-                <p>시간대별 날씨 정보</p>
-                <p>이번주 날씨 보기</p>
-            </div>
-            <div class="timelyWeatherBox">
-                <div class="timelyWeather">
-                    <div class="icon">
-                        <img src="../assets/images/04n.png" alt="">
+                <div class="detail">
+                    <div class="title">
+                        <p>🌈상세한 날씨 데이터🌞</p>
                     </div>
                     <div class="data">
-                        <p class="time">2pm</p>
-                        <p class="currentDegree">32&deg;</p>
-                        <div>
-                            <img src="../assets/images/drop.png" alt="" />
-                            <p class="fall">15%</p>
+                        <div class="dataName">
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div class="dataValue">
+                            <p><span></span></p>
                         </div>
                     </div>
                 </div>
@@ -63,10 +47,8 @@
 import Map from './Map.vue';
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .rightContainer {
-    // width: 40%;
-    // height: 100%;
     width: 324px;
     min-width: 324px;
     height: 700px;
@@ -74,35 +56,29 @@ import Map from './Map.vue';
     background: linear-gradient(#cb0000, #0e1239);
     box-shadow: 5px 5px 10px gray;
 
-    #cityNameBox {
+    .cityNameBox {
         width: 100%;
         height: 10%;
 
-        .cityName {
+        &__cityInfo {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+
+            gap: 5px;
+
             width: 100%;
             height: 100%;
+            
+            &__cityName{
+                color: $color-white-000;
+                font-family: 'Poppins';
+                font-size: 1.35rem
+            }
 
-            p {
-                color: white;
-                font-family: 'Poppins', sans-serif;
-                line-height: 2.5;
-                text-align: center;
-
-                &:first-child {
-                    width: 241px;
-                    height: 33px;
-                    font-size: 1.35rem;
-                }
-                &:last-child {
-                    width: 160px;
-                    height: 19px;
-                    font-size: 0.9rem;
-                    font-weight: 100;
-                }
+            &__date {
+                color: rgba($color-white-000, 0.5);
             }
         }
     }
@@ -111,6 +87,7 @@ import Map from './Map.vue';
         width: 100%;
         height: calc(45% - 16px);
         margin-top: 16px;
+        justify-content: center;
 
         .buttonBox {
             display: flex;
@@ -133,6 +110,7 @@ import Map from './Map.vue';
                     border-radius: 7.5px;
                     outline: 0;
                     cursor: pointer;
+
                     &.forecast {
                         background-color: transparent;
                         color: #a52727;
@@ -144,6 +122,7 @@ import Map from './Map.vue';
                 }
             }
         }
+
         .weatherBox {
             width: 100%;
             height: 80%;
@@ -153,14 +132,14 @@ import Map from './Map.vue';
                 align-items: center;
                 justify-content: center;
                 width: 100%;
-                height: 35%;
+                height: 15%;
 
                 p {
                     text-align: center;
                     font-size: 2.25rem;
                     font-weight: 500;
-                    font-family: 'GmarketSansBold';
-                    color: #fff;
+                    font-family: 'Be Vietnam Pro', sans-serif;
+                    color: white;
                 }
             }
             .detail {

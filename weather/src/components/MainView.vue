@@ -1,9 +1,9 @@
 <template>
     <div class="leftContainer">
-        <div id="cityNameBox">
-            <div class="cityName">
-                <p>San Fransisco</p>
-                <p>Oct 6, 2024</p>
+        <div class="cityNameBox">
+            <div class="cityNameBox__cityInfo">
+                <span class="cityNameBox__cityInfo__cityName">Seoul</span>
+                <span class="cityNameBox__cityInfo__date">Oct 6, 2024</span>
             </div>
         </div>
         <div id="contentsBox">
@@ -15,7 +15,7 @@
             </div>
             <div class="weatherBox">
                 <div class="weatherDegree">
-                    <p>10&deg;</p>
+                    <p>21&deg;</p>
                 </div>
                 <div class="weatherIcon">
                     <img src="../assets/images/01d.png" alt="MainLogo" />
@@ -39,11 +39,11 @@
                         <img src="../assets/images/04n.png" alt="">
                     </div>
                     <div class="data">
-                        <p class="time">2pm</p>
-                        <p class="currentDegree">32&deg;</p>
+                        <span class="time">2pm</span>
+                        <span class="currentDegree">32&deg;</span>
                         <div>
                             <img src="../assets/images/drop.png" alt="" />
-                            <p class="fall">15%</p>
+                            <span class="fall">15%</span>
                         </div>
                     </div>
                 </div>
@@ -69,35 +69,50 @@
     background: linear-gradient(#16455f, #0e1239);
     box-shadow: 5px 5px 10px gray;
 
-    #cityNameBox {
+    .cityNameBox {
         width: 100%;
         height: 10%;
 
-        .cityName {
+        &__cityInfo {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+
+            gap: 5px;
+
             width: 100%;
             height: 100%;
-
-            p {
-                color: white;
-                font-family: 'Poppins', sans-serif;
-                line-height: 2.5;
-                text-align: center;
-
-                &:first-child {
-                    width: 241px;
-                    height: 33px;
-                    font-size: 1.35rem;
-                }
-                &:last-child {
-                    width: 160px;
-                    height: 19px;
-                    font-size: 0.9rem;
-                    font-weight: 100;
-                }
+            
+            &__cityName{
+                color: $color-white-000;
+                font-family: 'Poppins';
+                font-size: 1.35rem
             }
+
+            &__date {
+                color: rgba($color-white-000, 0.5);
+            }
+
+
+            // p {
+            //     color: white;
+            //     font-family: 'Poppins', sans-serif;
+            //     line-height: 2.5;
+            //     text-align: center;
+
+            //     &:first-child {
+            //         width: 241px;
+            //         height: 33px;
+            //         font-size: 1.35rem;
+            //     }
+            //     &:last-child {
+            //         width: 160px;
+            //         height: 19px;
+            //         font-size: 0.9rem;
+            //         font-weight: 100;
+            //     }
+            // }
         }
     }
 
@@ -106,7 +121,7 @@
         height: 62.5%;
 
         .buttonBox {
-            display: center;
+            display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -144,7 +159,7 @@
             height: 80%;
 
             .weatherDegree {
-                display: center;
+                display: flex;
                 align-items: center;
                 justify-content: center;
                 width: 100%;
@@ -282,8 +297,19 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    flex-direction: column;
                     width: 55%;
                     height: 100%;
+                    color: $color-white-000;
+
+                    .currentDegree {
+                        font-size: 20px;
+                    }
+
+                    .fall {
+                        font-size: 0.9rem;
+                        margin-top: 1.5px;
+                    }
 
                     p {
                         color: whitesmoke;

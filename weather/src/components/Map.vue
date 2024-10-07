@@ -14,6 +14,7 @@
   justify-content: center;
   width: 100%;
   height: 35%;
+  background-color: whitesmoke;
 
   #map {
     width: 80%;
