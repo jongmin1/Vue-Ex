@@ -4,11 +4,12 @@
     <!-- <Containers />  -->
     <!-- <NavBar />
      <MainView /> -->
-    <div class="container">
+    <SideBar />
+    <!-- <div class="container">
         <div class="col-6">
             <LineChart />
         </div>
-    </div>
+    </div> -->
 </template>
 
 <script setup lang="ts">
@@ -18,4 +19,5 @@ import Containers from '../atoms/Containers.vue';
 import MainView from '../atoms/MainView.vue';
 import NavBar from '../atoms/NavBar.vue';
 import LineChart from '../atoms/Charts/LineChart.vue';
+import SideBar from '../organisms/SideBar.vue';
 </script>
