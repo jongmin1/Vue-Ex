@@ -1,25 +1,6 @@
 <template>
 <div class="main">
-      <nav class="navbar navbar-expand px-3 border-bottom">
-        <button class="btn" id="sidebar-toggle" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse navbar">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown d-flex align-items-end">
-              <span class="me-2 text-muted">user</span>
-              <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                <img src="../../assets/images/profile.jpg" class="avatar img-fluid rounded" alt="">
-              </a>
-              <div class="dropdown-menu dropdown-menu-end">
-                <a href="#" class="dropdown-item ">Profile</a>
-                <a href="#" class="dropdown-item">Setting</a>
-                <a href="#" class="dropdown-item">Logout</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <Navbar />
       <main class="content px-3 py-2">
         <div class="container-fluid">
           <div class="mb-3">
@@ -79,36 +60,7 @@
               </h6>
             </div>
             <div class="card-body">
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
-                </tbody>
-              </table>
+              <TableData />
             </div>
            </div>
            <div class="card border-0">
@@ -154,6 +106,9 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
+import LineChart from '../charts/LineChart.vue';
+import TableData from '../tables/TableData.vue';
+import Navbar from './Navbar.vue';
 
 onMounted(() => {
   const sidebarToggle = document.querySelector("#sidebar-toggle");
