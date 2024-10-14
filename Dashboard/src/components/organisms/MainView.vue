@@ -94,11 +94,11 @@
         <div class="card border-0">
           <div class="card-header">
             <h5 class="card-title">
-              Line Chart
+              Tesla Stock Price
             </h5>
           </div>
           <div class="card-body">
-            <LineChart />
+            <StockLine/>
           </div>
         </div>
       </div>
@@ -138,6 +138,7 @@ import LineChart from '../charts/LineChart.vue';
 import TableData from '../tables/TableData.vue';
 import Navbar from './Navbar.vue';
 import DonutChart from '../charts/DonutChart.vue';
+import StockLine from '../charts/StockLine.vue';
 
 onMounted(() => {
   const sidebarToggle = document.querySelector("#sidebar-toggle");
