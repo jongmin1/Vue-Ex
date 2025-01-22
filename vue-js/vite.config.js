@@ -14,8 +14,8 @@ export default defineConfig({
         new URL('./src/components', import.meta.url),
       ),
       '@views': fileURLToPath(new URL('./src/views', import.meta.url)),
-      '@routes': fileURLToPath(new URL('./src/routes', import.meta.url)),
-      '@store': fileURLToPath(new URL('./src/store', import.meta.url)),
+      '@router': fileURLToPath(new URL('./src/router', import.meta.url)),
+      '@stores': fileURLToPath(new URL('./src/stores', import.meta.url)),
     },
   },
   // SCSS 전역 사용
