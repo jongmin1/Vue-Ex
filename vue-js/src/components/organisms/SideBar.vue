@@ -21,14 +21,16 @@
     list-style: none;
     padding: 0;
     margin-top: 10px;
+    width: 100%;
   }
 
   &__item {
-    width: 100%;
+    width: 85%;
     color: $color-black-700;
     padding: 12px;
     cursor: pointer;
     margin-left: 10px;
+    margin-right: 10px;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.05);
