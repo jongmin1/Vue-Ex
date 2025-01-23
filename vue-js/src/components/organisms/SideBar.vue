@@ -13,8 +13,9 @@
 <style lang="scss" scoped>
 .sidebar {
   width: 140px;
+  height: 100%;
   background-color: $color-white-300;
-  // padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 
   &__menu {
     list-style: none;
@@ -30,7 +31,7 @@
     margin-left: 10px;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(0, 0, 0, 0.05);
     }
   }
 }
